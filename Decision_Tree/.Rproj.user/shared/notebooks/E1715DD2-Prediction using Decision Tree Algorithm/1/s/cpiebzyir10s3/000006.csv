@@ -1,0 +1,3 @@
+"0","# Remove Id"
+"0","Iris = Iris[-1]"
+"0","head(Iris,n=5)"

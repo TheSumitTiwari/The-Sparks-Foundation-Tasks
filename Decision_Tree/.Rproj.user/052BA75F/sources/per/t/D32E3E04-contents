@@ -1,0 +1,85 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+# Importing data set
+
+library(readr)
+Iris <- read_csv("Iris.csv")
+
+View(Iris)
+head(Iris,n=5)
+```
+
+```{r}
+# Remove Id column
+
+Iris = Iris[-1]
+head(Iris,n=5)
+```
+
+```{r}
+#Structure of a data set
+
+str(Iris)
+summary(Iris)
+```
+
+
+
+```{r}
+# checking NA values
+
+sum(is.na(Iris))
+```
+
+
+```{r}
+plot(Iris)
+```
+```{r}
+hist(Iris$PetalLengthCm, )
+```
+
+```{r}
+# Test and train split of data set
+
+library(caTools)
+set.seed(123)   
+
+split = sample.split(Iris$PetalLengthCm,SplitRatio = 0.80)
+train = subset(Iris,split==T)
+test = subset(Iris,split==F) 
+```
+
+
+```{r}
+# # Importing rpart and rpart.plot for decision tree
+
+library("rpart")
+library("rpart.plot")
+```
+
+
+
+```{r}
+# Decision Tree Model and its visualization
+
+DecisionTreeModel=rpart(Species~.,train,method = 'class')
+rpart.plot(DecisionTreeModel)
+```
+
+```{r}
+# Testing the model against test data set
+
+predictions = predict(DecisionTreeModel, test,type='class')
+cp <-  sum(predictions == test$Species)
+
+sprintf("Accuracy : %0.2f%%", (cp/27)*100)
+table(predictions, test$Species)
+```
+

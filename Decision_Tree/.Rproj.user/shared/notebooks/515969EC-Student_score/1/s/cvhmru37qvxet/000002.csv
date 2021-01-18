@@ -1,0 +1,13 @@
+"0","```r
+library(readr)
+student_scores<- read_csv(\"student_scores - student_scores.csv\")
+```"
+"1","Parsed with column specification:
+cols(
+  Hours = col_double(),
+  Scores = col_double()
+)
+"
+"0","```r
+View(student_scores)
+```"

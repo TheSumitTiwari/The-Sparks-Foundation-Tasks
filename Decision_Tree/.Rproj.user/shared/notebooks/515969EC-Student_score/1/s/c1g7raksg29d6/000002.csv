@@ -1,0 +1,5 @@
+"0","```r
+test$PreditedScores <- predict(lrModel, test)
+
+test[ , c(\"Scores\", \"PreditedScores\")]
+```"

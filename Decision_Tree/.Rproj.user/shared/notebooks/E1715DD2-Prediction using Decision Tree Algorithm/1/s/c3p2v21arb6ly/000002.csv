@@ -1,0 +1,14 @@
+"0","library(readr)"
+"0","Iris <- read_csv(""Iris.csv"")"
+"2","Parsed with column specification:
+cols(
+  Id = [32mcol_double()[39m,
+  SepalLengthCm = [32mcol_double()[39m,
+  SepalWidthCm = [32mcol_double()[39m,
+  PetalLengthCm = [32mcol_double()[39m,
+  PetalWidthCm = [32mcol_double()[39m,
+  Species = [31mcol_character()[39m
+)
+"
+"0","View(Iris)"
+"0","head(Iris,n=5)"

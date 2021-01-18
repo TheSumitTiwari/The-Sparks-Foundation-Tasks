@@ -1,0 +1,9 @@
+"0","library(readr)"
+"0","student_scores<- read_csv(""student_scores - student_scores.csv"")"
+"2","Parsed with column specification:
+cols(
+  Hours = [32mcol_double()[39m,
+  Scores = [32mcol_double()[39m
+)
+"
+"0","View(student_scores)"
