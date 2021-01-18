@@ -1,6 +1,0 @@
-"0","library(caTools)"
-"0","set.seed(123)   "
-"0",""
-"0","split = sample.split(student_scores$Hours,SplitRatio = 0.80)"
-"0","train = subset(student_scores,split==T)"
-"0","test = subset(student_scores,split==F) "

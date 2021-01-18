@@ -1,4 +1,0 @@
-"0","```r
-plot(student_scores )
-abline(lrModel, col=\"blue\")
-```"

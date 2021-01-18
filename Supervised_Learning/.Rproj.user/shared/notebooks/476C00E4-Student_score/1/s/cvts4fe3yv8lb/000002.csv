@@ -1,3 +1,0 @@
-"0","test$PreditedScores <- predict(lrModel, test)"
-"0",""
-"0","test[ , c(""Scores"", ""PreditedScores"")]"
